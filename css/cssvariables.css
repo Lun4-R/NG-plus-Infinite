@@ -1,0 +1,128 @@
+.MainText {
+  font-size: 12px;
+  position: relative;
+}
+
+.BuildingText {
+ line-height: 16px;
+  margin-top: -15px;
+  font-size: 32px;
+  position: relative;
+}
+
+.TitleText {
+  font-size: 12px
+}
+
+.StarRank {
+ font-size: 22px;
+ margin: 1px;
+ line-height: 10px;
+ position: absolute;
+ right: 10px;
+ top: -10px;
+}
+
+.StarRank div {
+  display: block;
+  margin-left: 5px; /* Adjust the indentation to control the displacement for each line */
+}
+
+
+.TabTest { 
+ background: linear-gradient(#007f7f, transparent), rgba(0, 191, 255, 0.25) !important;
+	border-color: transparent transparent #00ffff transparent !important;
+	box-shadow: 1px 1px 4px rgba(0, 191, 255, 0.5);
+	color: #7fffff !important
+}
+
+/* Style for the progress bar container */
+.progress-bar {
+  position: relative;
+  width: 200px; /* Set the width of the progress bar container */
+  height: 20px; /* Set the height of the progress bar container */
+  background-color: #f0f0f0; /* Set the background color of the progress bar container */
+  border-radius: 10px; /* Add rounded corners to the progress bar container */
+  overflow: hidden; /* Hide any overflow of the progress bar content */
+}
+
+/* Style for the progress bar background */
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4CAF50; /* Set the background color of the progress bar */
+  width: 0; /* Initial width of the progress bar (0% progress) */
+  border-radius: 10px; /* Add rounded corners to the progress bar */
+}
+
+/* Style for the gradient text */
+.GradientText {
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  color: transparent;
+  background-image: radial-gradient(circle, #ff0000, #00ff00); /* Adjust colors and shape as needed */
+}
+
+.Overheat {
+ color: #2b2b2b;
+}
+
+.OverheatFull {
+ color: #fc9003;
+ text-shadow: 0px 0px 10px;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 2px;
+    background-color: #e0e0e0;
+    border-radius: 0px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: jittery 0.07s linear infinite alternate;
+  }
+
+@keyframes jittery {
+    0% {
+      width: calc(60% + 5px);
+    }
+    100% {
+      width: calc(60% + 10px); /* Adjust the value to increase/decrease the jitter */
+    }
+  }
+  
+  
+  .cen {
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0px 0px 10px #ffffff;
+}
+
+.cen img {
+  margin-top: 10px;
+}
+
+.cBreakMKII {
+ line-height: 20px;
+}
+
+.ide {
+ font-size: 5px;
+}
+
+.mT {
+ resize: both;
+ overflow: auto;
+}

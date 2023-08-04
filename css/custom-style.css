@@ -1,0 +1,123 @@
+
+.cBreak {
+  line-height: 10px; /* what */
+}
+
+.RankStar {
+  position: 0.5 , 0.5;
+}
+
+
+
+.N.treeNode {
+  border-radius: 15px;
+  border: 0px;
+  font-family: CRDILight;
+}
+
+.N.reset:can {
+  background: linear-gradient(45deg, rgba(207,255,146,1) 0%, rgba(90,153,144,1) 100%);
+  border-radius: 5px;
+  border: 0px;
+}
+
+.N.locked {
+  border-radius: 5px;
+  border: 0px;
+  margin: 5px;
+}
+
+.N.bought {
+  border-radius: 5px;
+  border: 0px;
+  margin: 5px;
+}
+
+.N.can {
+  background: linear-gradient(45deg, rgba(207,255,146,1) 0%, rgba(90,153,144,1) 100%);
+  border-radius: 5px;
+  border: 0px;
+  margin: 5px;
+}
+
+.N.reset {
+  border-radius: 5px;
+  border: 0px;
+}
+
+
+
+.P.treeNode {
+ border-radius: 15px;
+ border: 0px;
+ font-family: CRDILight;
+}
+
+.P.reset:can {
+ background: linear-gradient(180deg, rgba(84,244,215,1) 0%, rgba(90,129,153,1) 100%);
+ border-radius: 5px;
+ border: 0px;
+}
+
+.P.locked {
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.P.bought {
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.P.can {
+ background: linear-gradient(180deg, rgba(84,244,215,1) 0%, rgba(90,129,153,1) 100%);
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.P.reset {
+ border-radius: 5px;
+ border: 0px;
+}
+
+
+
+.B.treeNode {
+ border-radius: 15px;
+ border: 0px;
+ font-family: CRDILight;
+}
+
+.B.reset:can {
+ background: linear-gradient(180deg, rgba(14,83,167,1) 0%, rgba(1,117,189,1) 100%);
+ border-radius: 5px;
+ border: 0px;
+}
+
+.B.locked {
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.B.bought {
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.B.can {
+ background: linear-gradient(180deg, rgba(14,83,167,1) 0%, rgba(1,117,189,1) 100%);
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+ color: #ffffff;
+}
+
+.B.reset {
+ border-radius: 5px;
+ border: 0px;
+}
