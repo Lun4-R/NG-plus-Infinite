@@ -257,8 +257,8 @@ addLayer("N", {
            if (player.N.points.gte(11)) {
             return `
                                                    <div>
-                                                   NG+(10) ( currently endgame ) <br>
-                    + Unlock Generators
+                                                   NG+(11) ( currently endgame ) <br>
+                    + Unlock Generators ( lmao why did you even grinded for this, also no it isn't fully done )
             </div>`
            }
            return ``
