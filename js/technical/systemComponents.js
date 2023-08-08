@@ -144,7 +144,10 @@ var systemComponents = {
 		<br><br>
         Time Played: {{ formatTime(player.timePlayed) }}<br><br>
         <h3>Hotkeys</h3><br>
-        <span v-for="key in hotkeys" v-if="player[key.layer].unlocked && tmp[key.layer].hotkeys[key.id].unlocked"><br>{{key.description}}</span></div>
+        <Kbd class="hotkey">P</Kbd> for Prestige reset<br>
+        <Kbd class="hotkey">B</Kbd> for Booster reset<br>
+        <Kbd class="hotkey">Shift</Kbd> + <Kbd class="hotkey">H</Kbd> to generate Heat<br>
+        <Kbd class="hotkey" >N</Kbd> for NG reset<br>
     `
     },
 

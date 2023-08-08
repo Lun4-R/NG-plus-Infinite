@@ -19,6 +19,7 @@ function startPlayerBase() {
 		keepGoing: false,
 		hasNaN: false,
 		notation: "Standard",
+		name: "???",
 
 		points: modInfo.initialStartPoints,
 		subtabs: {},

@@ -7,6 +7,8 @@ let modInfo = {
 	"main.js",
 	"prestige.js",
 	"booster.js",
+	"generators.js",
+	"accelerant.js",
 	"tree.js"],
 
 	discordName: "",
@@ -17,8 +19,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "v1.0",
-	name: "New Game +++",
+	num: "v2.00",
+	name: "Final Future - NG+(10)",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -30,7 +32,7 @@ let winText = `Congratulations! You have reached the end and beaten this game, b
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
-var doNotCallTheseFunctionsEveryTick = ["blowUpEverything"] 
+var doNotCallTheseFunctionsEveryTick = ["blowUpEverything", "procHeat", "procTanks", "procKilns"] 
 
 function getStartPoints(){
     return new Decimal(modInfo.initialStartPoints)
@@ -66,7 +68,20 @@ function getPointGen() {
 	gain = gain.mul(hasUpgrade("P", 33) ? 4 : 1)
 	gain = gain.mul(hasUpgrade("P", 34) ? 4 : 1)
 	
+	gain = gain.mul(hasUpgrade("P", 41) ? 5 : 1)
+	gain = gain.mul(hasUpgrade("P", 42) ? 5 : 1)
+	gain = gain.mul(hasUpgrade("P", 43) ? 5 : 1)
+	gain = gain.mul(hasUpgrade("P", 44) ? 5 : 1)
+	
+	gain = gain.mul(upgradeEffect("B", 21))
+	gain = gain.mul(buyableEffect("B", "P2"))
+	gain = gain.mul(buyableEffect("AC", "HeatBoostI"))
+	
+	gain = gain.mul(tmp["N"].challenges["T0"].effect)
 	gain = gain.pow(hasUpgrade("B", 12) ?tmp.B.prestartBoostI : 1)
+	gain = gain.pow(hasUpgrade("B", 22) ?tmp.B.prestartBoostII : 1)
+	
+	gain = gain.pow(tmp.N.ch1De)
 	return gain
 }
 
@@ -80,7 +95,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("e280000000"))
+	return player.points.gte(new Decimal("eee9"))
 }
 
 
@@ -100,4 +115,5 @@ function maxTickLength() {
 // Use this if you need to undo inflation from an older version. If the version is older than the version that fixed the issue,
 // you can cap their current resources with this.
 function fixOldSave(oldVersion){
+ player.N.points = new Decimal(5)
 }

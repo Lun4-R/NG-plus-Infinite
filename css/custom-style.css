@@ -121,3 +121,73 @@
  border-radius: 5px;
  border: 0px;
 }
+
+
+
+.AC.treeNode {
+ border-radius: 15px;
+ border: 0px;
+ font-family: CRDILight;
+}
+
+.AC.reset:can {
+ background: linear-gradient(270deg, rgba(161,223,255,1) 0%, rgba(255,153,142,1) 100%);
+ border-radius: 5px;
+ border: 0px;
+}
+
+.AC.locked {
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.AC.bought {
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.AC.can {
+ background: linear-gradient(270deg, rgba(161,223,255,1) 0%, rgba(255,153,142,1) 100%);
+ border-radius: 5px;
+ border: 0px;
+ margin: 5px;
+}
+
+.AC.reset {
+ border-radius: 5px;
+ border: 0px;
+}
+
+.G.treeNode {
+  border-radius: 15px;
+  border: 0px;
+  font-family: CRDILight;
+  background-image: url('../image-folder/Stellar.png')
+}
+
+.G.reset:can {
+  background: linear-gradient(0deg, rgba(0,255,134,1) 0%, rgba(0,164,67,1) 100%);
+  border-radius: 5px;
+  border: 0px;
+}
+
+.G.locked {
+  border-radius: 5px;
+  border: 0px;
+  margin: 5px;
+}
+
+.G.bought {
+  border-radius: 5px;
+  border: 0px;
+  margin: 5px;
+}
+
+.G.can {
+  background: linear-gradient(0deg, rgba(0,255,134,1) 0%, rgba(0,164,67,1) 100%);
+  border-radius: 5px;
+  border: 0px;
+  margin: 5px;
+}

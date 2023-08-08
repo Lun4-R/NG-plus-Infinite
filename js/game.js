@@ -30,6 +30,8 @@ function getResetGain(layer, useType = null) {
 		return gain.floor().max(0);
 	} else if (type=="custom"){
 		return layers[layer].getResetGain()
+	} else if (type=="table") {
+	 return tmp[layer].tResetCost
 	} else {
 		return decimalZero
 	}
