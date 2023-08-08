@@ -146,7 +146,6 @@ var systemComponents = {
         <h3>Hotkeys</h3><br>
         <Kbd class="hotkey">P</Kbd> for Prestige reset<br>
         <Kbd class="hotkey">B</Kbd> for Booster reset<br>
-        <Kbd class="hotkey">Shift</Kbd> + <Kbd class="hotkey">H</Kbd> to generate Heat<br>
         <Kbd class="hotkey" >N</Kbd> for NG reset<br>
     `
     },

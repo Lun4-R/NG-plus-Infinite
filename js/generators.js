@@ -22,8 +22,6 @@ addLayer("G", {
     },
     branches : [["P", "#ffffff", "10"]],
     row: 1, // Row the layer is in on the tree (0 is the first row)
-    hotkeys: [
-        {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
-    ],
+    
     layerShown(){return player.N.points.gte(11)}
 })

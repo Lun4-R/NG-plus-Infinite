@@ -169,6 +169,9 @@ addLayer("P", {
        }
       },
     },
+    hotkeys: [
+     { key: "p", description: "P: Reset for prestige points is possible", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
+        ],
     row: 0,
     layerShown(){return player.N.points.gte(2)}
 })

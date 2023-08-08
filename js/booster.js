@@ -274,6 +274,9 @@ addLayer("B", {
     ]
   }
  },
+ hotkeys: [
+  { key: "b", description: "B: Reset for Boosters if possible", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
+     ],
  row: 1,
  layerShown() { return player.N.points.gte(4) }
 })

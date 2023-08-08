@@ -272,6 +272,9 @@ addLayer("N", {
           ]
         }
     },
+    hotkeys: [
+     { key: "n", description: "N: Make a New Game if possible", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
+        ],
     row: 999, // ahhhh, hughh, eughhh
     layerShown(){return true}
 })
