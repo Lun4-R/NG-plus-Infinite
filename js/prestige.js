@@ -41,10 +41,10 @@ addLayer("P", {
      if (player.N.points.gte(5)) buyUpgrade(this.layer, 23)
      if (player.N.points.gte(5)) buyUpgrade(this.layer, 24)
      
-     if (player.N.points.gte(9)) buyUpgrade(this.layer, 31)
-     if (player.N.points.gte(9)) buyUpgrade(this.layer, 32)
-     if (player.N.points.gte(9)) buyUpgrade(this.layer, 33)
-     if (player.N.points.gte(9)) buyUpgrade(this.layer, 34)
+     if (player.N.points.gte(6)) buyUpgrade(this.layer, 31)
+     if (player.N.points.gte(6)) buyUpgrade(this.layer, 32)
+     if (player.N.points.gte(6)) buyUpgrade(this.layer, 33)
+     if (player.N.points.gte(6)) buyUpgrade(this.layer, 34)
      
      if (player.N.points.gte(9)) buyUpgrade(this.layer, 41)
      if (player.N.points.gte(9)) buyUpgrade(this.layer, 42)

@@ -480,8 +480,6 @@ function loadVue() {
           <div class="fill" v-bind:style="[tmp[layer].bars[data].style, tmp[layer].bars[data].fillStyle, style.fillDims]"></div>
         </div>
       </div>
-      <div class="gridOverlay" v-bind:style="{'position': 'absolute', 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'background': 'url(images/Grid.png) repeat'}"></div>
-    </div>
   `
 });
 
