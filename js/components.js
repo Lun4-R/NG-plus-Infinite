@@ -448,7 +448,7 @@ function loadVue() {
 
 
 	// data = id of the bar
-	Vue.component('bar', {
+/*	Vue.component('bar', {
 		props: ['layer', 'data'],
 		computed: {
 			style() {return constructBarStyle(this.layer, this.data)}
@@ -463,7 +463,27 @@ function loadVue() {
 			</div>
 		</div></div>
 		`
-	})
+	})*/
+	
+	Vue.component('bar', {
+  props: ['layer', 'data'],
+  computed: {
+    style() { return constructBarStyle(this.layer, this.data) }
+  },
+  template: `
+    <div v-if="tmp[layer].bars && tmp[layer].bars[data].unlocked" v-bind:style="{'position': 'relative'}">
+      <div v-bind:style="[tmp[layer].bars[data].style, style.dims, {'display': 'table'}]">
+        <div class="overlayTextContainer barBorder" v-bind:style="[tmp[layer].bars[data].borderStyle, style.dims]">
+          <span class="overlayText" v-bind:style="[tmp[layer].bars[data].style, tmp[layer].bars[data].textStyle]" v-html="run(layers[layer].bars[data].display, layers[layer].bars[data])"></span>
+        </div>
+        <div class="barBG barBorder" v-bind:style="[tmp[layer].bars[data].style, tmp[layer].bars[data].baseStyle, tmp[layer].bars[data].borderStyle, style.dims]">
+          <div class="fill" v-bind:style="[tmp[layer].bars[data].style, tmp[layer].bars[data].fillStyle, style.fillDims]"></div>
+        </div>
+      </div>
+      <div class="gridOverlay" v-bind:style="{'position': 'absolute', 'top': '0', 'left': '0', 'width': '100%', 'height': '100%', 'background': 'url(images/Grid.png) repeat'}"></div>
+    </div>
+  `
+});
 
 
 	Vue.component('achievements', {

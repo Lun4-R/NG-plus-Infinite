@@ -182,8 +182,8 @@ var systemComponents = {
 				<br>
 				</tr>
 				<tr>
-				<td><button class="opt" onclick="hardReset()">HARD RESET<br>
-				<b style='font-size:12px'>Irreversible!</b></button></td>
+				<td><button class="opt" onclick="hardReset()">HARD RESET</button><br>
+				<td><button id="opt installButton">Add to Home Screen</button>
 				</tr>
 				</tr> 
         </table>`

@@ -11,13 +11,13 @@ body {
 
 @font-face {
   font-family: CRDILight;
-  src: url('../font-folder/TestFont-1.otf')
+  src: url('../font-folder/TestFont.ttf')
 }
 
 /* General text */
 h1, h2, h3, b, input {
 	display: inline;
-	font-family: CRDILight
+	font-family: CRDILight;
 }
 
 /* These are styles for different states of components. You can make layer-specific versions with .c.locked, for example */

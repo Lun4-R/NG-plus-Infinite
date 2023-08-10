@@ -1,0 +1,16 @@
+{
+      "name": "New Game+ Infinite",
+      "short_name": "NG+ inf",
+      "icons": [
+        {
+          "src": "images/IconV3.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ],
+      "start_url": ".",
+      "display": "standalone",
+      "background_color": "#ffffff",
+      "theme_color": "#ffffff"
+    }
+    
