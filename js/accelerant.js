@@ -1194,7 +1194,7 @@ addLayer("AC", {
     }]]], ["clickable", "ProcKilns"]]],
      ["row", [["column", [["bar", "waterCapacity"], ['raw-html', () => {
      const [heat, tanks] = tmp.AC.waterNeed
-     if (player.N.points.gte(9)) { return `<div class="InfoBox"><img src='images/Tanks.png' class='cen' width='14' height='14'> ${format(tanks)} Tanks <img src='images/Heat.png' class='cen' width='14' height='14'> ${format(heat)} Hear</b></div>` }
+     if (player.N.points.gte(9)) { return `<div class="InfoBox"><img src='images/Tanks.png' class='cen' width='14' height='14'> ${format(tanks)} Tanks <img src='images/Heat.png' class='cen' width='14' height='14'> ${format(heat)} Heat</b></div>` }
     }]]], ["clickable", "ProcWater"]]]
      ]
   },
