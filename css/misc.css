@@ -81,3 +81,17 @@
 .hl {
 	border-top: 3px solid var(--color);
 }
+
+
+.BarInfoLF {
+  position: absolute;
+  left: 5%;
+  text-align: left;
+  transform: translateY(-45%);
+}
+
+.BarInfoRG {
+  position: absolute;
+  right: 5%;
+  transform: translateY(-45%);
+}

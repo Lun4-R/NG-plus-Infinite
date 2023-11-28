@@ -224,7 +224,7 @@ function doReset(layer, force=false) {
 		rowReset(r, layer)
 	}
 
-	player[layer].resetTime = 0
+	player[layer].resetTime = new Decimal(0)
 
 	updateTemp()
 	updateTemp()
@@ -344,7 +344,7 @@ function gameLoop(diff) {
 	for (let x = 0; x <= maxRow; x++){
 		for (item in TREE_LAYERS[x]) {
 			let layer = TREE_LAYERS[x][item]
-			player[layer].resetTime += diff
+			player[layer].resetTime = player[layer].resetTime.add(diff)
 			if (tmp[layer].passiveGeneration) generatePoints(layer, diff*tmp[layer].passiveGeneration);
 			if (layers[layer].update) layers[layer].update(diff);
 		}
@@ -353,7 +353,7 @@ function gameLoop(diff) {
 	for (row in OTHER_LAYERS){
 		for (item in OTHER_LAYERS[row]) {
 			let layer = OTHER_LAYERS[row][item]
-			player[layer].resetTime += diff
+			player[layer].resetTime = player[layer].resetTime.add(diff)
 			if (tmp[layer].passiveGeneration) generatePoints(layer, diff*tmp[layer].passiveGeneration);
 			if (layers[layer].update) layers[layer].update(diff);
 		}

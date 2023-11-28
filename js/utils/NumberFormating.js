@@ -542,7 +542,10 @@ function formatSmall(x, precision=6) {
 }
 
 function formatNoDecimals(x, precision=0) { 
-    return format(x, precision, true)    
+  if (x.gte(9.999e5)) {
+    return format(x)
+  }
+    return x.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function invertOOM(x){

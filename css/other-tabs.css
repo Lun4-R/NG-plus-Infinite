@@ -96,15 +96,8 @@ a {
 }
 
 .opt {
-	height: 100px;
-	width: 100px;
-	border-radius: 2.5%;
-	border: 0px solid;
-	background-color: var(--color);
-	border-color: rgba(0, 0, 0, 0.125);
-	color: rgba(0, 0, 0, 0.5);
-	cursor: pointer;
-	line-height: 1.075em;
+  width: 150px;
+  height: 150px;
 }
 
 .opt:hover {

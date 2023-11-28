@@ -19,7 +19,7 @@ function startPlayerBase() {
 		keepGoing: false,
 		hasNaN: false,
 		notation: "Standard",
-		name: "???",
+		theme: "Aero",
 
 		points: modInfo.initialStartPoints,
 		subtabs: {},
@@ -71,7 +71,7 @@ function getStartLayerData(layer) {
 	if (layerdata.best === undefined)
 		layerdata.best = decimalZero;
 	if (layerdata.resetTime === undefined)
-		layerdata.resetTime = 0;
+		layerdata.resetTime = new Decimal(0);
 	if (layerdata.forceTooltip === undefined)
 		layerdata.forceTooltip = false;
 
@@ -224,7 +224,7 @@ function loadOptions() {
 		options = Object.assign(getStartOptions(), JSON.parse(decodeURIComponent(escape(atob(get2)))));
 	else 
 		options = getStartOptions()
-	if (themes.indexOf(options.theme) < 0) theme = "default"
+	if (themes.indexOf(options.theme) < 0) theme = "Aero"
 	fixData(options, getStartOptions())
 
 }

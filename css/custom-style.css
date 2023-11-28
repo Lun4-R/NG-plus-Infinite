@@ -1,193 +1,315 @@
-
-.cBreak {
-  line-height: 10px; /* what */
+.treeNodeTiTe {
+  line-height: 0.5em;
 }
 
-.RankStar {
-  position: 0.5 , 0.5;
+#treeNodeTi {
+  font-size: 38px;
+  font-family: CRDIBold;
 }
 
+#treeNodeSTi {
+  font-size: 20px;
+}
 
-
-.N.treeNode {
-  border-radius: 15px;
-  border: 0px;
+#prestigeResetT1 {
   font-family: CRDILight;
+  font-size: 18px;
 }
 
-.N.reset:can {
-  background: linear-gradient(45deg, rgba(207,255,146,1) 0%, rgba(90,153,144,1) 100%);
-  border-radius: 5px;
-  border: 0px;
+#prestigeResetT2 {
+  font-family: CRDIBold;
+  font-size: 22px;
 }
 
-.N.locked {
-  border-radius: 5px;
-  border: 0px;
-  margin: 5px;
+#gradPP {
+  background: -webkit-linear-gradient(90deg, rgba(0,205,255,1) 0%, rgba(0,145,213,1) 49.9999%, rgba(0,234,255,1) 50%, rgba(0,168,229,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
 }
 
-.N.bought {
-  border-radius: 5px;
-  border: 0px;
-  margin: 5px;
+#gradB {
+  background: -webkit-linear-gradient(90deg, rgba(0,92,255,1) 0%, rgba(31,0,200,1) 49.9999%, rgba(7,42,243,1) 50%, rgba(0,7,137,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
 }
 
-.N.can {
-  background: linear-gradient(45deg, rgba(207,255,146,1) 0%, rgba(90,153,144,1) 100%);
-  border-radius: 5px;
-  border: 0px;
-  margin: 5px;
+#gradG {
+  background: -webkit-linear-gradient(90deg, rgba(81,203,94,1) 0%, rgba(28,67,34,1) 49.9999%, rgba(83,169,75,1) 50%, rgba(47,124,67,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
 }
 
-.N.reset {
-  border-radius: 5px;
-  border: 0px;
+.NG.treeNode {
+  font-family: CRDIBold;
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 0px;
+  border-width: 0px;
+  
+  background: linear-gradient(55deg, rgba(255,241,0,1) 0%, rgba(0,255,212,1) 100%);
 }
 
+
+.NG.reset.can {
+  background: linear-gradient(55deg, rgba(255,241,0,1) 0%, rgba(0,255,212,1) 100%);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  border-width: 0px;
+  width: 450px;
+  height: 125px;
+}
+
+.NG.reset {
+  background: linear-gradient(55deg, rgba(255, 241, 0, 0.5) 0%, rgba(0, 255, 212, 0.5) 100%);
+  color: rgba(0, 0, 0, 0.75);
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 125px;
+}
 
 
 .P.treeNode {
- border-radius: 15px;
- border: 0px;
- font-family: CRDILight;
+  font-family: CRDIBold;
+  width: 125px !important;
+  height: 125px !important;
+  padding: 10px;
+  border-radius: 0px;
+  border-width: 0px;
+  color: rgba(0,0,0,0.5) !important;
+  background: linear-gradient(0deg, rgba(0,205,255,1) 0%, rgba(0,145,213,1) 49.9999%, rgba(0,234,255,1) 50%, rgba(0,168,229,1) 100%) !important;
 }
 
-.P.reset:can {
- background: linear-gradient(180deg, rgba(84,244,215,1) 0%, rgba(90,129,153,1) 100%);
- border-radius: 5px;
- border: 0px;
+
+.P.reset.can {
+  background: linear-gradient(0deg, rgba(0,205,255,1) 0%, rgba(0,145,213,1) 49.9999%, rgba(0,234,255,1) 50%, rgba(0,168,229,1) 100%);
+  color: rgba(0, 0, 0, 0.75);
+  border-radius: 0px;
+  border-width: 0px;
+  width: 450px;
+  height: 130px;
 }
 
-.P.locked {
- border-radius: 5px;
- border: 0px;
- margin: 5px;
-}
-
-.P.bought {
- border-radius: 5px;
- border: 0px;
- margin: 5px;
-}
-
-.P.can {
- background: linear-gradient(180deg, rgba(84,244,215,1) 0%, rgba(90,129,153,1) 100%);
- border-radius: 5px;
- border: 0px;
- margin: 5px;
+.P.reset.locked {
+  background: linear-gradient(0deg, rgba(79, 79, 79, 1) 0%, rgba(53, 53, 53, 1) 49.9999%, rgba(65, 65, 65, 1) 50%, rgba(44, 44, 44, 1) 100%);
+  color: #FFFFFF;
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 130px;
 }
 
 .P.reset {
- border-radius: 5px;
- border: 0px;
+  background: linear-gradient(0deg, rgba(0,205,255,1) 0%, rgba(0,145,213,1) 49.9999%, rgba(0,234,255,1) 50%, rgba(0,168,229,1) 100%);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 130px;
 }
 
+.P.upg {
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  margin: 5px;
+}
+
+.P.locked {
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(79,79,79,1) 0%, rgba(53,53,53,1) 49.9999%, rgba(65,65,65,1) 50%, rgba(44,44,44,1) 100%);
+  color: #FFFFFF;
+}
+
+.P.can {
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(0,102,127,1) 0%, rgba(0,72,107,1) 49.9999%, rgba(0,117,127,1) 50%, rgba(0,84,114,1) 100%);
+  color: #FFFFFF;
+}
+
+.P.bought {
+    width: 170px;
+    height: 150px;
+    border: 0px solid;
+    border-radius: 0px;
+    background: linear-gradient(0deg, rgba(0,205,255,1) 0%, rgba(0,145,213,1) 49.9999%, rgba(0,234,255,1) 50%, rgba(0,168,229,1) 100%)
+}
 
 
 .B.treeNode {
- border-radius: 15px;
- border: 0px;
- font-family: CRDILight;
+  font-family: CRDIBold;
+  width: 125px !important;
+  height: 125px !important;
+  padding: 10px;
+  border-radius: 0px;
+  border-width: 0px;
+  color: rgba(0, 0, 0, 0.5) !important;
+  background: linear-gradient(0deg, rgba(0,92,255,1) 0%, rgba(31,0,200,1) 49.9999%, rgba(7,42,243,1) 50%, rgba(0,7,137,1) 100%) !important;
 }
 
-.B.reset:can {
- background: linear-gradient(180deg, rgba(14,83,167,1) 0%, rgba(1,117,189,1) 100%);
- border-radius: 5px;
- border: 0px;
+
+.B.reset.can {
+  background: linear-gradient(0deg, rgba(0,92,255,1) 0%, rgba(31,0,200,1) 49.9999%, rgba(7,42,243,1) 50%, rgba(0,7,137,1) 100%);
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 0px;
+  border-width: 0px;
+  width: 450px;
+  height: 130px;
 }
 
-.B.locked {
- border-radius: 5px;
- border: 0px;
- margin: 5px;
-}
-
-.B.bought {
- border-radius: 5px;
- border: 0px;
- margin: 5px;
-}
-
-.B.can {
- background: linear-gradient(180deg, rgba(14,83,167,1) 0%, rgba(1,117,189,1) 100%);
- border-radius: 5px;
- border: 0px;
- margin: 5px;
- color: #ffffff;
+.B.reset.locked {
+  background: linear-gradient(0deg, rgba(79, 79, 79, 1) 0%, rgba(53, 53, 53, 1) 49.9999%, rgba(65, 65, 65, 1) 50%, rgba(44, 44, 44, 1) 100%);
+  color: #FFFFFF;
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 130px;
 }
 
 .B.reset {
- border-radius: 5px;
- border: 0px;
+  background: linear-gradient(0deg, rgba(0,92,255,1) 0%, rgba(31,0,200,1) 49.9999%, rgba(7,42,243,1) 50%, rgba(0,7,137,1) 100%);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 130px;
 }
 
-
-
-.AC.treeNode {
- border-radius: 15px;
- border: 0px;
- font-family: CRDILight;
+.B.upg {
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  margin: 5px;
 }
 
-.AC.reset:can {
- background: linear-gradient(270deg, rgba(161,223,255,1) 0%, rgba(255,153,142,1) 100%);
- border-radius: 5px;
- border: 0px;
+.B.locked {
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(79, 79, 79, 1) 0%, rgba(53, 53, 53, 1) 49.9999%, rgba(65, 65, 65, 1) 50%, rgba(44, 44, 44, 1) 100%);
+  color: #FFFFFF;
 }
 
-.AC.locked {
- border-radius: 5px;
- border: 0px;
- margin: 5px;
+.B.can {
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(0, 46, 127, 0.5) 0%, rgba(15, 0, 100, 0.5) 49.9999%, rgba(3, 21, 122, 0.5) 50%, rgba(0, 3, 68, 0.5) 100%);
+  color: #FFFFFF;
 }
 
-.AC.bought {
- border-radius: 5px;
- border: 0px;
- margin: 5px;
+.B.bought {
+  color: #FFFFFF;
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(0,92,255,1) 0%, rgba(31,0,200,1) 49.9999%, rgba(7,42,243,1) 50%, rgba(0,7,137,1) 100%)
 }
 
-.AC.can {
- background: linear-gradient(270deg, rgba(161,223,255,1) 0%, rgba(255,153,142,1) 100%);
- border-radius: 5px;
- border: 0px;
- margin: 5px;
-}
-
-.AC.reset {
- border-radius: 5px;
- border: 0px;
-}
 
 .G.treeNode {
-  border-radius: 15px;
-  border: 0px;
-  font-family: CRDILight;
-  background-image: url('../image-folder/Stellar.png')
+  font-family: CRDIBold;
+  width: 125px !important;
+  height: 125px !important;
+  padding: 10px;
+  border-radius: 0px;
+  border-width: 0px;
+  color: rgba(0, 0, 0, 0.5) !important;
+  background: linear-gradient(0deg, rgba(81,203,94,1) 0%, rgba(28,67,34,1) 49.9999%, rgba(83,169,75,1) 50%, rgba(47,124,67,1) 100%) !important;
 }
 
-.G.reset:can {
-  background: linear-gradient(0deg, rgba(0,255,134,1) 0%, rgba(0,164,67,1) 100%);
-  border-radius: 5px;
-  border: 0px;
+
+.G.reset.can {
+  background: linear-gradient(0deg, rgba(81,203,94,1) 0%, rgba(28,67,34,1) 49.9999%, rgba(83,169,75,1) 50%, rgba(47,124,67,1) 100%);
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 0px;
+  border-width: 0px;
+  width: 450px;
+  height: 130px;
+}
+
+.G.reset.locked {
+  background: linear-gradient(0deg, rgba(79, 79, 79, 1) 0%, rgba(53, 53, 53, 1) 49.9999%, rgba(65, 65, 65, 1) 50%, rgba(44, 44, 44, 1) 100%);
+  color: #FFFFFF;
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 130px;
+}
+
+.G.reset {
+  background: linear-gradient(0deg, rgba(81,203,94,1) 0%, rgba(28,67,34,1) 49.9999%, rgba(83,169,75,1) 50%, rgba(47,124,67,1) 100%);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  border-width: 0px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  height: 130px;
+}
+
+.G.upg {
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  margin: 5px;
 }
 
 .G.locked {
-  border-radius: 5px;
-  border: 0px;
-  margin: 5px;
-}
-
-.G.bought {
-  border-radius: 5px;
-  border: 0px;
-  margin: 5px;
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(79, 79, 79, 1) 0%, rgba(53, 53, 53, 1) 49.9999%, rgba(65, 65, 65, 1) 50%, rgba(44, 44, 44, 1) 100%);
+  color: #FFFFFF;
 }
 
 .G.can {
-  background: linear-gradient(0deg, rgba(0,255,134,1) 0%, rgba(0,164,67,1) 100%);
-  border-radius: 5px;
-  border: 0px;
-  margin: 5px;
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(40, 101, 47, 1) 0%, rgba(14, 33, 17, 1) 49.9999%, rgba(41, 84, 37, 1) 50%, rgba(23, 62, 33, 1) 100%);
+  color: #FFFFFF;
+}
+
+.G.bought {
+  color: #FFFFFF;
+  width: 170px;
+  height: 150px;
+  border: 0px solid;
+  border-radius: 0px;
+  background: linear-gradient(0deg, rgba(81,203,94,1) 0%, rgba(28,67,34,1) 49.9999%, rgba(83,169,75,1) 50%, rgba(47,124,67,1) 100%)
+}
+
+.AC.treeNode {
+  font-family: CRDIBold;
+  width: 125px !important;
+  height: 125px !important;
+  padding: 10px;
+  border-radius: 0px;
+  border-width: 0px;
+  color: rgba(0, 0, 0, 0.5) !important;
+  background: linear-gradient(110deg, rgba(73,239,255,1) 0%, rgba(0,188,220,1) 49.9999%, rgba(255,135,63,1) 50%, rgba(255,58,58,1) 100%) !important;
 }

@@ -1,5 +1,5 @@
-// ************ Themes ************
-var themes = ["default", "Aqua"]
+// ************ Themes
+var themes = ["Aero"]
 
 var colors = {
 	default: {
@@ -12,28 +12,36 @@ var colors = {
 		background: "#0f0f0f",
 		background_tooltip: "rgba(0, 0, 0, 0.75)",
 	},
-	Aqua: {
-		1: "#bfdfff",
-		2: "#8fa7bf",
-		3: "#5f6f7f",
-		color: "#bfdfff",
-		points: "#dfefff",
-		locked: "#c4a7b3",
-		background: "#001f3f",
-		background_tooltip: "rgba(0, 15, 31, 0.75)",
+	Aero: {
+	  1: "#FFFFFF",
+	  2: "#8fa7bf",
+	  3: "#5f6f7f",
+	  color: "#FFFFFF",
+	  points: "#FFFFFF",
+	  locked: "#c4a7b3",
+	  wid: "250px",
+	  hei: "75px",
+	  mrg: "2.5px",
+	  clr: "linear-gradient(0deg, rgba(213,213,213,1) 0%, rgba(255,255,255,1) 100%)",
+	  background: "#111111",
+	  background_tooltip: "rgba(0, 15, 31, 0.75)",
 	},
 }
 function changeTheme() {
 
-	colors_theme = colors[options.theme || "default"];
+	colors_theme = colors[options.theme || "Aero"];
 	document.body.style.setProperty('--background', colors_theme["background"]);
 	document.body.style.setProperty('--background_tooltip', colors_theme["background_tooltip"]);
 	document.body.style.setProperty('--color', colors_theme["color"]);
+	document.body.style.setProperty('--wid', colors_theme["wid"]);
+	document.body.style.setProperty('--hei', colors_theme["hei"]);
+	document.body.style.setProperty('--clr', colors_theme["clr"]);
+	document.body.style.setProperty('--mrg', colors_theme["mrg"]);
 	document.body.style.setProperty('--points', colors_theme["points"]);
 	document.body.style.setProperty("--locked", colors_theme["locked"]);
 }
 function getThemeName() {
-	return options.theme? options.theme : "default";
+	return options.theme? options.theme : "Aero";
 }
 
 function switchTheme() {

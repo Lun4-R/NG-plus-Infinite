@@ -1,45 +1,11 @@
 function displayPluses(count) {
-  if (count <= 0) {
+  let cnt = new Decimal(count)
+  if (cnt.lte(0)) {
     return '';
   }
-  if (count <= 4) {
-    return '+'.repeat(count);
+  if (cnt.lte(3)) {
+    return '+'.repeat(cnt);
   } else {
-    return '+(' + count + ')';
+    return '+<sup>' + cnt + '</sup>';
   }
-}
-
-
-function showCustomDialog() {
- document.getElementById('customDialog').style.display = 'block';
-}
-
-// Close the custom dialog
-function closeCustomDialog() {
- document.getElementById('customDialog').style.display = 'none';
-}
-
-function changeName() {
- var newName = document.getElementById('nameInput').value.trim();
- var nameLink = document.getElementById('nameLink');
-
- switch (newName.toLowerCase()) {
-  case 'walter white':
-   nameLink.innerText = 'the one who knocks...';
-   break;
-  case 'zittara':
-   nameLink.innerText = 'Niko Steiner';
-   break;
-  case 'matrix':
-   nameLink.innerText = '1337';
-   break;
-  default:
-   if (newName !== '') {
-    nameLink.innerText = newName;
-   } else {
-    alert("Input was empty.");
-   }
- }
-
- closeCustomDialog();
 }

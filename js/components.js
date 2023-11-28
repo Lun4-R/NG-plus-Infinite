@@ -522,7 +522,7 @@ function loadVue() {
 		template: `<div>
 		<span class="upgRow" v-for="(row, r) in data"><table>
 			<span v-for="(node, id) in row" style = "{width: 0px}">
-				<tree-node :layer='node' :prev='layer' :abb='tmp[node].rawText' :key="key + '-' + r + '-' + id"></tree-node>
+				<tree-node :layer='node' :prev='layer' :abb='tmp[node].rawText' :style='tmp[node].style' :key="key + '-' + r + '-' + id"></tree-node>
 			</span>
 			<tr><table><button class="treeNode hidden"></button></table></tr>
 		</span></div>
