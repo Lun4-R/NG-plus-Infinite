@@ -20,8 +20,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "v3.00",
-	name: "Overture - NG××",
+	num: "v3.001",
+	name: "mass media constant - NG+(9)",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
