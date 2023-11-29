@@ -20,7 +20,7 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "v3.001",
+	num: "v3.02",
 	name: "mass media constant - NG+(9)",
 }
 

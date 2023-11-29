@@ -799,7 +799,60 @@ addLayer("AC", {
          }
        },
        effect(x) {
-         let PowerI = new Decimal(5)
+         let PowerI = new Decimal(9)
+
+         let Effect = new Decimal(1).mul(Decimal.pow(PowerI, x.pow(1)))
+         return Effect;
+       },
+       unlocked() {
+         return true
+       }
+     },
+     "POINT_BUYABLE_III": {
+       cost(x) {
+         let PowerI = new Decimal(1.5)
+         let Calculation = new Decimal(20).mul(Decimal.pow(PowerI, x.pow(1))).ceil()
+         return Calculation;
+       },
+       buy() {
+         player[this.layer].RESOURCES[3] = player[this.layer].RESOURCES[3].sub(this.cost())
+         setBuyableAmount(this.layer, this.id, getBuyableAmount(this.layer, this.id).add(1))
+       },
+       display() {
+         var S = tmp[this.layer].buyables[this.id]
+         var SV = player[this.layer].buyables[this.id]
+         return `<div style="line-height: 8px">
+          <span style="font-size:12px; font-family:CRDIMed">Point Buyable+++</span>
+          <span style="font-size:5px; font-family:CRDIReg">Level ${format(SV, 0)}</span><br>
+          <span style="font-size:9px; font-family:CRDIReg">${format(S.effect)}x Points</span>
+          <span style="font-size:9px; font-family:CRDILight">Cost: ${formatNoDecimals(S.cost)} Kilns</span></div>`
+       },
+       canAfford() {
+         return player[this.layer].RESOURCES[3].gte(this.cost())
+       },
+       style() {
+         if (tmp[this.layer].buyables[this.id].canAfford)
+           return {
+             "background": "linear-gradient(0deg, rgba(99,99,99,1) 0%, rgba(51,51,51,1) 49.9999%, rgba(76,76,76,1) 50%, rgba(46,46,46,1) 100%)",
+             "width": "150px",
+             "height": "60px",
+             "border-radius": "0px",
+             "border": "0px",
+             "margin": "2.5px",
+             "color": "#000000"
+           }
+         return {
+           "background": "linear-gradient(0deg, rgba(49, 49, 49, 1) 0%, rgba(26, 26, 26, 1) 49.9999%, rgba(38, 38, 38, 1) 50%, rgba(23, 23, 23, 1) 100%)",
+           "width": "150px",
+           "height": "60px",
+           "border-radius": "0px",
+           "border": "0px",
+           "margin": "2.5px",
+           "color": "#ffffff"
+         }
+       },
+       effect(x) {
+         let PowerI = new Decimal(27)
 
          let Effect = new Decimal(1).mul(Decimal.pow(PowerI, x.pow(1)))
          return Effect;
@@ -1976,18 +2029,24 @@ addLayer("AC", {
          ["blank", "40px"],
          ["row", [["column", [["bar", "TANK_BAR"]]], ["clickable", "PRODUCE_TANKS"]]],
          ["row", [["buyable", "TANK_QUANTITY_I"], ["buyable", "TANK_CAPACITY_I"]]],
-         ['raw-html', () => { return `
+         ['raw-html', () => { 
+         if (player.AC.BEST_RESOURCES[1].gte(10)) {
+         return `
          <br><div class="InfoBox" style="line-height: 12px">
          <span style="font-size: 20px; font-family: CRDIReg">REQUIRED RESOURCES</span><br>
-         <img src='images/Heat.png' class='cen' width='20' height='20'> -${format(player.AC.REQUIRED_RESOURCES["TANKS"][1])} ${player.AC.NORMALIZED_RESOURCES[1]} </div>` }],
+         <img src='images/Heat.png' class='cen' width='20' height='20'> -${format(player.AC.REQUIRED_RESOURCES["TANKS"][1])} ${player.AC.NORMALIZED_RESOURCES[1]} </div>`}
+         return ``}],
          ["blank", "40px"],
          ["row", [["column", [["bar", "KILN_BAR"]]], ["clickable", "PRODUCE_KILNS"]]],
          ["row", [["buyable", "KILN_QUANTITY_I"], ["buyable", "KILN_CAPACITY_I"]]],
-         ['raw-html', () => { return `
+         ['raw-html', () => { 
+           if (player.AC.BEST_RESOURCES[2].gte(50)) {
+         return `
          <br><div class="InfoBox" style="line-height: 12px">
          <span style="font-size: 20px; font-family: CRDIReg">REQUIRED RESOURCES</span><br>
          <img src='images/Heat.png' class='cen' width='20' height='20'> -${format(player.AC.REQUIRED_RESOURCES["KILNS"][1])} ${player.AC.NORMALIZED_RESOURCES[1]}<br>
-         <img src='images/Tanks.png' class='cen' width='20' height='20'>         -${format(player.AC.REQUIRED_RESOURCES["KILNS"][2])} ${player.AC.NORMALIZED_RESOURCES[2]}</div>` }],
+         <img src='images/Tanks.png' class='cen' width='20' height='20'>         -${format(player.AC.REQUIRED_RESOURCES["KILNS"][2])} ${player.AC.NORMALIZED_RESOURCES[2]}</div>`}
+         return ``}],
          ]
      },
      "Special Stuff": {
@@ -1999,7 +2058,7 @@ addLayer("AC", {
      "Permament Upgrades": {
        unlocked() { return player.AC.BEST_RESOURCES[3].gte(1) },
        content: [
-         ["row", [["buyable", "POINT_BUYABLE_I"], ["buyable", "POINT_BUYABLE_II"]]]
+         ["row", [["buyable", "POINT_BUYABLE_I"], ["buyable", "POINT_BUYABLE_II"], ["buyable", "POINT_BUYABLE_III"]]]
          ]
      }
  },
