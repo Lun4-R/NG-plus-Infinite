@@ -98,6 +98,7 @@ function getPointGen() {
 	
 	gain = gain.mul(buyableEffect("AC", "POINT_BUYABLE_I"))
 	gain = gain.mul(buyableEffect("AC", "POINT_BUYABLE_II"))
+	gain = gain.mul(buyableEffect("AC", "POINT_BUYABLE_III"))
 	return gain
 }
 
