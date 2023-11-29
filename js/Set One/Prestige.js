@@ -514,12 +514,5 @@ cost(x) {
           "upgrades"
           ]
       },
-      "Misc": {
-        unlocked() { return player.NG.points.gte(5) },
-        content: [
-          ['raw-html', () => { return `You have <span id='gradPP'>${format(player.P.points)}</span> Prestige Points` }],
-          ["buyable", "I"]
-          ]
-      }
     }
 })
