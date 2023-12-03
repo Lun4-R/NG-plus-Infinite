@@ -18,8 +18,8 @@ addLayer("NG", {
       new Decimal(10), new Decimal(20), new Decimal(1e3),
       new Decimal(2e4), new Decimal(1.5e7), new Decimal(2.5e11),
       new Decimal(1e18), new Decimal(5e47), new Decimal(1e106),
-      new Decimal(1e212), new Decimal("1.78e308"), new Decimal("8e4097"),
-      new Decimal("16e8191"), new Decimal("32e16384"), new Decimal("64e32768")
+      new Decimal(1e212), new Decimal("1.78e308"), new Decimal("3e450"),
+      new Decimal("6e900"), new Decimal("12e2250"), new Decimal("24e6500")
       ]
     return table[id]
   },
@@ -28,6 +28,9 @@ addLayer("NG", {
     let gainR = getPointGen().clampMin(1);
     let currentR = player.points;
     let left = new Decimal(need).sub(currentR)
+    if (need.gte("1.78e308")) {
+      return new Decimal(1)
+    }
     if (gainR.gt(0)) {
       let calc = new Decimal(left).div(gainR).clampMin(1);
       return calc;

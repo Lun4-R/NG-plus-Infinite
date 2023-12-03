@@ -20,7 +20,7 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "4.02",
+	num: "4.03",
 	name: "continuum - NG+(9)?",
 }
 
