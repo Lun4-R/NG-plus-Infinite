@@ -8,6 +8,7 @@ addLayer("NG", {
     return {
       unlocked: true,
       points: new Decimal(0),
+      endgame: new Decimal(0)
     }
   },
   requires() {
@@ -79,7 +80,8 @@ addLayer("NG", {
     tmp.NG.StartBoostPoints();
   },
   StoryProgression() {
-    if (player.NG.points.gte(10)) {
+    if (player.NG.points.gte(10) && player.NG.endgame.eq(0)) {
+      player.NG.endgame = new Decimal(1)
       setTimeout(function() {
         createToast("Oh?", "toast-neutral", 3000);
       }, 0);
@@ -99,8 +101,8 @@ addLayer("NG", {
         createToast("But, NG+(9) is a bug, you should've not gotten at first place", "toast-neutral", 3000);
       }, 16500);
       setTimeout(function() {
-        createToast("Think about this. Why is there Infinity and a new NG type at same spot?", "toast-neutral", 19800);
-      }, 0);
+        createToast("Think about this. Why is there Infinity and a new NG type at same spot?", "toast-neutral", 3000);
+      }, 19800);
     }
   },
   clickables: {
