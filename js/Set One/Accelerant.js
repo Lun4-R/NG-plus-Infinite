@@ -1707,7 +1707,7 @@ SET_KILN_AUTOMATION() {
          return Effect;
        },
        unlocked() {
-         return player.AC.RESOURCES["KILNS"]["UNLOCKED"].gte(1)
+         return player.AC.RESOURCES["FLUID"]["UNLOCKED"].gte(1)
        }
      },
      "FLUID_CAPACITY_I": {
