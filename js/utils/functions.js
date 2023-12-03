@@ -127,3 +127,30 @@ function getLogisticAmount(current, gain, loss, diff){
 			return val5.max(0)
 	}
 }
+
+function createToast(message, state, duration) {
+  const toastContainer = document.getElementById("toast-container");
+  const toast = document.createElement("div");
+  toast.classList.add("toast", state, "show-toast");
+  const flexContainer = document.createElement("div");
+  flexContainer.classList.add("flex-container");
+  const textSpan = document.createElement("span");
+  textSpan.textContent = message;
+  textSpan.style.display = "flex";
+  textSpan.style.alignItems = "center";
+
+
+  flexContainer.appendChild(textSpan);
+  toast.appendChild(flexContainer);
+  toastContainer.appendChild(toast);
+  toast.offsetWidth;
+
+
+  toast.style.opacity = "1";
+  setTimeout(() => {
+    toast.style.opacity = "0";
+  }, duration);
+  toast.addEventListener("transitionend", () => {
+    toast.remove();
+  });
+}

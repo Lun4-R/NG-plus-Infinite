@@ -89,7 +89,7 @@ h1, h2, h3, b, input {
 }
 
 .can:hover {
-	transform: scale(1.075, 1.075);
+	transform: scale(1.0, 1.0);
 	box-shadow: 0 0 px
 }
 

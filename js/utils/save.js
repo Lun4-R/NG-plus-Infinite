@@ -216,6 +216,7 @@ function load() {
 	updateTemp();
 	updateTabFormats()
 	loadVue();
+	createToast("Game loaded! Happy grinding!", "toast-success", 1000)
 }
 
 function loadOptions() {
@@ -315,7 +316,7 @@ var saveInterval = setInterval(function () {
 		return;
 	if (options.autosave)
 		save();
-}, 5000);
+}, 3000);
 
 window.onbeforeunload = () => {
     if (player.autosave) {

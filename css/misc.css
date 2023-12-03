@@ -95,3 +95,61 @@
   right: 5%;
   transform: translateY(-45%);
 }
+
+#toast-container {
+  position: fixed;
+  top: -5%;
+  right: 20px;
+  z-index: 99999999;
+}
+
+.toast {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  margin: 5px;
+}
+
+.toast-success {
+  background-color: rgba(0, 255, 0, 0.1);
+  background-image: url('../images/NotifyGrid.svg');
+  background-size: 33%;
+}
+
+.toast-notify {
+  background-color: #4D65B42A;
+  background-image: url('../images/NotifyGrid.svg');
+  background-size: 33%;
+}
+
+.toast-alert {
+  background-color: #FFD7002A;
+  background-image: url('../images/NotifyGrid.svg');
+  background-size: 33%;
+}
+
+.toast-neutral {
+  background-color: #FFFFFF2A;
+  background-image: url('../images/NotifyGrid.svg');
+  background-size: 33%;
+}
+
+.show-toast {
+  display: block;
+  animation: slide-up 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}

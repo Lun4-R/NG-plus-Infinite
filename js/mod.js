@@ -20,8 +20,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "v3.02",
-	name: "mass media constant - NG+(9)",
+	num: "4.0",
+	name: "continuum - NG+(9)?",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -33,7 +33,7 @@ let winText = `Congratulations! You have reached the end and beaten this game, b
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
-var doNotCallTheseFunctionsEveryTick = ["blowUpEverything", "StartBoostPoints", "UniversalNGReset", "PRODUCE_HEAT", "PRODUCE_TANKS", "PRODUCE_KILNS", "PRODUCE_WORKERS_1", "PRODUCE_WORKERS_2"] 
+var doNotCallTheseFunctionsEveryTick = ["blowUpEverything", "StartBoostPoints", "UniversalNGReset", "PRODUCE_HEAT", "PRODUCE_TANKS", "PRODUCE_KILNS", "PRODUCE_FLUID", "PRODUCE_WORKERS_1", "PRODUCE_WORKERS_2", "SET_HEAT_AUTOMATION", "SET_TANK_AUTOMATION", "SET_KILN_AUTOMATION"] 
 
 function getStartPoints(){
     return new Decimal(modInfo.initialStartPoints)
@@ -99,6 +99,7 @@ function getPointGen() {
 	gain = gain.mul(buyableEffect("AC", "POINT_BUYABLE_I"))
 	gain = gain.mul(buyableEffect("AC", "POINT_BUYABLE_II"))
 	gain = gain.mul(buyableEffect("AC", "POINT_BUYABLE_III"))
+	gain = gain.mul(buyableEffect("AC", "POINT_BUYABLE_IV"))
 	return gain
 }
 

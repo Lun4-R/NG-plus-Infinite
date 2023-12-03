@@ -18,9 +18,6 @@ function getStartOptions() {
 	}
 }
 let notations = ['Standard' , 'Scientific' , 'Mixed Scientific', 'Engineering' , "Mixed Engineering" , "Hyper-E" , "Letters" , "Hexa" , "Binary" , "Genetic" , "Chemistry", "Blind", "Cancer"]
-
-
-
 let decimals = [3, 4, 5, 6, 7]
 
 function changeNotation() {

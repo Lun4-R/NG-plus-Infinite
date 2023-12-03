@@ -110,11 +110,7 @@
 
   .cen {
   vertical-align: middle;
-  margin-top: -2px;
-}
-
-.cen img {
-  margin-top: 5px;
+  margin-top: -5px;
 }
 
 .cBreakMKII {
@@ -122,7 +118,7 @@
 }
 
 .ide {
- font-size: 5px;
+ font-size: 7px;
 }
 
 .mT {

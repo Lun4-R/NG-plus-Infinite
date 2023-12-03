@@ -112,7 +112,7 @@ var systemComponents = {
 			<br>Offline Time: {{formatTime(player.offTime.remain)}}<br>
 		</span>
 		<br>
-		<span v-if="player.points.lt('1e1000')"  class="overlayThing">You have </span>
+		<span v-if="player.points.lt('1e1000')"  id="pointstuff" class="overlayThing">You have </span>
 		<h2  class="overlayThing" id="points">{{format(player.points)}}</h2>
 		<span v-if="player.points.lt('1e1e6')"  class="overlayThing"> {{modInfo.pointsName}}</span>
 		<br>
@@ -183,7 +183,7 @@ var systemComponents = {
     				</tr>
     				<tr>
     				<td><button class="opt" onclick="hardReset()">HARD RESET</button><br>
-    				<td><button id="opt installButton">Add to Home Screen</button>
+    				<td><button class="opt" id="installButton">Add to Home Screen</button>
     				</tr>
     				</tr> 
             </table>`

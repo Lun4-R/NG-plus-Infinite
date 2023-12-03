@@ -68,6 +68,12 @@ addLayer("G", {
     },
     update(diff) {
       player.G.gen_PWR_I = player.G.gen_PWR_I.add((tmp.G.gainPWRI).mul(diff))
+        if (player.NG.points.gte(9)) buyUpgrade(this.layer, 11)
+        if (player.NG.points.gte(9)) buyUpgrade(this.layer, 12)
+        if (player.NG.points.gte(9)) buyUpgrade(this.layer, 13)
+        if (player.NG.points.gte(9)) buyUpgrade(this.layer, 14)
+        if (player.NG.points.gte(9)) buyUpgrade(this.layer, 15)
+        if (player.NG.points.gte(9)) buyUpgrade(this.layer, 16)
     },
     upgrades: {
         11: {
