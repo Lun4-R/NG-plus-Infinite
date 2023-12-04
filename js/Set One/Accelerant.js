@@ -1014,6 +1014,82 @@ SET_KILN_AUTOMATION() {
          return true
        }
      },
+    
+     "FORCE_RESET_WORKERS": {
+       title() {
+         return `<b style="font-size:12px">FORCE RESET ASSIGNED WORKERS</b>`
+       },
+       canClick() {
+         return true
+       },
+       onClick() {
+         player.AC.SPECIAL_RESOURCES["Workers"]["USED_AM"] = new Decimal(0);
+         player.AC.RESOURCES["HEAT"]["AUTOMATORS_ASG"] = new Decimal(0);
+         player.AC.RESOURCES["TANKS"]["AUTOMATORS_ASG"] = new Decimal(0);
+         player.AC.RESOURCES["KILNS"]["AUTOMATORS_ASG"] = new Decimal(0);
+         player.AC.RESOURCES["FLUID"]["AUTOMATORS_ASG"] = new Decimal(0);
+       },
+       style() {
+         if (tmp[this.layer].clickables[this.id].canClick) return {
+           "background": "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 49.9999%, rgba(213,213,213,1) 50%, rgba(143,143,143,1) 100%)",
+           "width": "360px",
+           "height": "50px",
+           "border-radius": "0px",
+           "border": "0px",
+           "margin": "5px",
+           "color": "#000000"
+         }
+         return {
+           "background": "linear-gradient(0deg, rgba(127, 127, 127, 1) 0%, rgba(71, 71, 71, 1) 49.9999%, rgba(106, 106, 106, 1) 50%, rgba(71, 71, 71, 1) 100%)",
+           "width": "360px",
+           "height": "50px",
+           "border-radius": "0px",
+           "border": "0px",
+           "margin": "5px",
+           "color": "#ffffff"
+         }
+       },
+       unlocked() {
+         return true
+       }
+     },
+     "FORCE_RESET_RESOURCES": {
+       title() {
+         return `<b style="font-size:12px">FORCE RESET RESOURCES TO 0</b>`
+       },
+       canClick() {
+         return true
+       },
+       onClick() {
+         player.AC.RESOURCES["HEAT"]["AMOUNT"] = new Decimal(0);
+         player.AC.RESOURCES["TANKS"]["AMOUNT"] = new Decimal(0);
+         player.AC.RESOURCES["KILNS"]["AMOUNT"] = new Decimal(0);
+         player.AC.RESOURCES["FLUID"]["AMOUNT"] = new Decimal(0);
+       },
+       style() {
+         if (tmp[this.layer].clickables[this.id].canClick) return {
+           "background": "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 49.9999%, rgba(213,213,213,1) 50%, rgba(143,143,143,1) 100%)",
+           "width": "360px",
+           "height": "50px",
+           "border-radius": "0px",
+           "border": "0px",
+           "margin": "5px",
+           "color": "#000000"
+         }
+         return {
+           "background": "linear-gradient(0deg, rgba(127, 127, 127, 1) 0%, rgba(71, 71, 71, 1) 49.9999%, rgba(106, 106, 106, 1) 50%, rgba(71, 71, 71, 1) 100%)",
+           "width": "360px",
+           "height": "50px",
+           "border-radius": "0px",
+           "border": "0px",
+           "margin": "5px",
+           "color": "#ffffff"
+         }
+       },
+       unlocked() {
+         return true
+       }
+     },
  },
  buyables: {
      "HEAT_QUANTITY_I": {
@@ -3306,6 +3382,12 @@ SET_KILN_AUTOMATION() {
        unlocked() { return player.AC.RESOURCES["KILNS"]["UNLOCKED"].gte(1)},
        content: [
          ["row", [["buyable", "POINT_BUYABLE_I"], ["buyable", "POINT_BUYABLE_II"], ["buyable", "POINT_BUYABLE_III"], ["buyable", "POINT_BUYABLE_IV"]]]
+         ]
+     },
+     "Debug Options": {
+       content: [
+         ["row", [["clickable", "FORCE_RESET_WORKERS"]]],
+         ["row", [["clickable", "FORCE_RESET_RESOURCES"]]]
          ]
      }
  },
